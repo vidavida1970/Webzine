@@ -34,3 +34,29 @@ if (progress) {
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 }
+
+const shareButton = document.querySelector('[data-share]');
+if (shareButton) {
+  shareButton.addEventListener('click', async () => {
+    const payload = {
+      title: document.title,
+      text: '뜨거운 걸 먹고 싶어지는 계절 — 안성마춤 웹진 에디터스 레터',
+      url: window.location.href,
+    };
+    try {
+      if (navigator.share) {
+        await navigator.share(payload);
+        return;
+      }
+    } catch (error) {
+      if (error && error.name === 'AbortError') return;
+    }
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      shareButton.textContent = '링크를 복사했습니다';
+      window.setTimeout(() => { shareButton.textContent = '공유하기'; }, 1800);
+    } catch (error) {
+      window.prompt('아래 주소를 복사해 공유하세요.', window.location.href);
+    }
+  });
+}

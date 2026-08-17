@@ -287,3 +287,212 @@ figcaption { margin-top: 12px; color: var(--ink-soft); font-size: .78rem; line-h
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Editor's Letter */
+.letter-hero {
+  min-height: calc(100svh - 72px);
+  display: grid;
+  align-items: end;
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  background: #1a1411 url("assets/images/hero-gukbap.jpg") center 42% / cover no-repeat;
+}
+.letter-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(18,12,10,.18) 0%, rgba(18,12,10,.08) 38%, rgba(18,12,10,.82) 100%),
+    linear-gradient(90deg, rgba(18,12,10,.42) 0%, rgba(18,12,10,.08) 55%);
+}
+.letter-hero-copy {
+  width: min(calc(100% - 32px), 860px);
+  margin: 0 auto;
+  padding: 120px 0 56px;
+}
+.letter-hero .issue-kicker { color: #efc08a; }
+.letter-hero h1 {
+  margin: 16px 0 18px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+.letter-hero-dek {
+  max-width: 34em;
+  margin: 0 0 18px;
+  color: #f3e8dc;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.letter-hero-meta {
+  margin: 0 0 28px;
+  color: rgba(255,247,236,.78);
+  font-size: .82rem;
+  letter-spacing: .04em;
+}
+.letter-scroll {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: .82rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.letter-scroll::after {
+  content: "";
+  width: 1px;
+  height: 28px;
+  margin-left: 12px;
+  background: currentColor;
+}
+.letter-body {
+  width: min(calc(100% - 48px), 680px);
+  margin: 0 auto;
+  padding: 88px 0 48px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+.letter-head { margin-bottom: 42px; }
+.letter-head h2 {
+  margin: 12px 0 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.letter-body > p { margin: 0 0 28px; }
+.letter-inline-figure {
+  width: 100vw;
+  max-width: none;
+  margin: 48px calc(50% - 50vw);
+  padding: 0;
+}
+.letter-inline-figure img {
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+}
+.letter-inline-figure figcaption {
+  width: min(calc(100% - 48px), 680px);
+  margin: 14px auto 48px;
+  color: var(--ink-soft);
+  font-size: .82rem;
+}
+.letter-senselist {
+  color: var(--ink);
+  font-weight: 400;
+}
+.letter-emphasis {
+  font-weight: 500;
+}
+.letter-signoff {
+  display: grid;
+  gap: 6px;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+}
+.letter-signoff span { font-size: 1.05rem; }
+.letter-signoff small { color: var(--ink-soft); letter-spacing: .08em; }
+.letter-toc {
+  padding: 80px 0;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+.letter-toc-inner {
+  width: min(calc(100% - 48px), 680px);
+  margin: 0 auto;
+}
+.letter-toc h2 {
+  margin: 10px 0 28px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+}
+.letter-toc-list { display: grid; }
+.letter-toc-list a {
+  display: grid;
+  gap: 4px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+}
+.letter-toc-list a:last-child { border-bottom: 1px solid var(--line); }
+.letter-toc-list span {
+  color: rgba(93,81,72,.68);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.letter-toc-list strong {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.letter-toc-list a:hover strong { color: var(--broth); }
+.letter-close {
+  min-height: 640px;
+  display: grid;
+  align-items: end;
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  background: #1d2a2c url("assets/images/lake-dusk.jpg") center / cover no-repeat;
+}
+.letter-close::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(16,24,26,.18) 0%, rgba(16,24,26,.78) 100%);
+}
+.letter-close-copy {
+  width: min(calc(100% - 48px), 680px);
+  margin: 0 auto;
+  padding: 96px 0 64px;
+}
+.letter-close .section-kicker { color: #c9e4e2; }
+.letter-close h2 {
+  margin: 12px 0 28px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+}
+.letter-takeaways {
+  margin: 0 0 28px;
+  padding-left: 1.15em;
+  color: #f4eee6;
+}
+.letter-takeaways li + li { margin-top: 10px; }
+.letter-tags {
+  margin: 0 0 28px;
+  color: rgba(244,238,230,.76);
+  font-size: .86rem;
+  letter-spacing: .02em;
+}
+.letter-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.letter-close .button-ghost { color: #fff; }
+
+@media (max-width: 720px) {
+  .letter-hero {
+    min-height: 86svh;
+    background-image: url("assets/images/hero-gukbap-portrait.jpg");
+    background-position: center 28%;
+  }
+  .letter-hero-copy { padding: 150px 0 42px; }
+  .letter-hero h1 { font-size: 28px; }
+  .letter-body { width: min(calc(100% - 48px), 680px); padding-top: 64px; }
+  .letter-toc, .letter-close-copy { padding-block: 64px; }
+  .letter-toc-list a { display: grid; }
+}
+
+.letter-notify-note{margin:18px 0 0;color:rgba(244,238,230,.78);font-size:.86rem;}
