@@ -8,7 +8,8 @@
 - `letter.html` — 에디터스 레터
 - `focus.html` — 안성국밥 메인 기사 + 인물 취재 자리
 - `season.html` — 안성 포도 + 가정용 국밥 레시피 + 페어링
-- `travel.html` — 시장·박물관·금광호수 코스 + 9월 프리뷰 + 마켓
+- `travel.html` — 시장·박물관·금광호수 코스 + 9월 프리뷰
+- `market.html` — 08 MARKET, 안성마춤 다섯과 장보기
 - `calendar.html` — 07 CALENDAR, 9월 초가을 일정 카드
 
 ## 편집 상태
